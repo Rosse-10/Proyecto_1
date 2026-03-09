@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenida</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 60px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            width: 500px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: white;
+            color: #764ba2;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #f8f9fc;
+            transform: scale(1.05);
+        }
+
+        .emoji {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚀</div>
+        <h1>Bienvenida, {{ user.username }}!</h1>
+        <h2>Has iniciado sesión correctamente</h2>
+        <p>Este es tu espacio privado. Aquí puedes comenzar a construir tu proyecto increíble.</p>
+
+        <a href="{% url 'registro' %}" class="btn">Cerrar sesión</a>
+    </div>
+</body>
+</html>
